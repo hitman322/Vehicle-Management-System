@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<div class="container">
+		<div class="jumbotron" id="vehjumbo">
+			<h2>Welcome,<span id="user_id">{{session.user_id}}</span></h2>
+			<br>
+			<hr>
+			<br>
+			<table class="table table-striped">
+			<tr>
+				<th>Registration Number</th>
+				<th>Vehicle Name</th>
+				<th>Vehicle Repair Date</th>
+				<th>Oil Expenses</th>
+			</tr>
+		{% for vehicle in data %}
+			<tr>
+				<td>{{vehicle.veh_reg_no}}</td>
+				<td>{{vehicle.veh_name}}</td>
+				<td>{{vehicle.veh_repairdate}}</td>
+				<td>{{vehicle.veh_oilexpenses}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+
+		</div>
+	</div>
+{% endblock %}

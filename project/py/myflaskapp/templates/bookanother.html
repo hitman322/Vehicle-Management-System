@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+        <div class="container">
+            <div class="jumbotron" id="dashjumbo">
+        		<h2>Thank you {{ session.user_id }},See you soon!!</h2>   
+                <br>                        
+                <h3>Wanna ride again ?</h3>
+                <br>
+               	<p><a class="btn btn-primary btn-lg" href="/bookride" role="button">Book another ride</a></p>
+			</div>
+        </div>
+
+
+
+{% endblock %}

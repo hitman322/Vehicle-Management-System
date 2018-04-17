@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<div class="container">
+		<div class="jumbotron" id="vehjumbo">
+			<h2>Welcome,<span id="user_id">{{session.user_id}}</span></h2>
+			<a class="btn btn-success" href="/adddriver"> Add Driver</a>
+			<br>
+			<hr>
+			<br>
+			<table class="table table-striped">
+			<tr>
+				<th>Driver Id</th>
+				<th>Driver Name</th>
+				<th>Driver Mobile</th>
+				<th></th>
+				<th></th>
+			</tr>
+		{% for driver in data %}
+			<tr>
+				<td>{{driver.driver_id}}</td>
+				<td>{{driver.driver_name}}</td>
+				<td>{{driver.driver_mobile}}</td>
+				<td><a href="editdriver/{{driver.driver_id}}" class="btn btn-default pull-right">Edit</a></td>
+				<td>
+					<form action="{{url_for('deletedriver', driver_id=driver.driver_id)}}" method="post"> 
+						<input type="hidden" name="method" value="DELETE">
+						<input type="submit" name="method" value="Delete" class="btn btn-danger">
+					</form>	
+
+				</td>
+			</tr>
+		{% endfor %}
+	</table>
+
+		</div>
+	</div>
+{% endblock %}

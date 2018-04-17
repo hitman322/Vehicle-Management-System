@@ -1,0 +1,35 @@
+{% extends 'layoutreg.html' %}
+
+
+{% block body %}
+    <div class="main main-agileits">
+        <div class="main-agilerow">
+            <div class="signup-wthreetop">
+                <h2>Book your ride </h2>
+                <p>Enter details to get started !!</p>
+            </div> 
+            <div class="contact-wthree">
+                {% from "includes/_formhelpers.html" import render_field %}
+                <form method = "POST" action ="">
+                    
+                    <div class="form-group">
+                        {{render_field(form.start, class_ = "form-control",placeholder = "Boarding Point")}}
+                        
+                    </div>
+                    <div class="form-group">
+                        {{render_field(form.end, class_ = "form-control",placeholder = "Destination")}}
+                        
+
+                    </div>
+                
+                    <div class="form-group">
+                        {{render_field(form.veh_type, class_ = "form-control",placeholder = "Vehicle Type")}}
+                        
+                    </div>
+                    
+                    <p><input type ="submit" class="btn btn-primary" value ="SUBMIT"></p>
+                </form>
+                </div> 
+        </div> 
+    </div>
+{% endblock %}

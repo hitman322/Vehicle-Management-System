@@ -1,0 +1,94 @@
+#heading {
+    color: #f4390b;
+}
+
+body {
+    background: url(car3.jpg);
+    /*background-size: cover;*/
+    background-size: 100%;
+}
+
+.jumbotron {
+    margin-top: 150px;
+}
+
+
+#jumbo {
+    position: center;
+    margin-top: 80px;
+    margin-left: 385px;
+    height: 450px;
+    width:  400px;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.70);
+}
+
+#welcomejumbo {
+    position: center;
+    margin-top: 80px;
+    margin-left: 385px;
+    height: 450px;
+    width:  400px;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.70);
+}
+
+#bookride {
+    text-align: center;
+    margin-top: 80px;
+}
+
+#homejumbo {
+    background-color: hsla(0, 4%, 60%, 0.702);
+    color: white !important;
+}
+
+#dashjumbo {
+    position: center;
+    height: 400px;
+    width:  650px;
+    margin-top: 50px;
+    margin-left: 265px;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.70);
+}
+
+#cancelbook {
+    margin-left: 150px;
+}
+
+#ridedet {
+    margin-left:250px;
+}
+
+#cancelbut {
+    margin-left: 15px;
+}
+
+#viewjumbo {
+    margin-top: 150px;
+    background-color: rgba(255,255,255,0.70);
+}
+
+#vehjumbo {
+    background-color: rgba(255,255,255,0.70);
+    margin-top: 50px;
+}
+
+.navbar-default{
+    background-color:rgba(0,0,0,.75) !important;
+    border-color: black !important;
+}
+
+#hello{
+    font-family:'Lobster', cursive ;
+    font-size: 50px;
+}
+#message {
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+}
+
+#signuptex {
+    font-family: 'Fjalla One', sans-serif;
+}

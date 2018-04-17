@@ -1,0 +1,19 @@
+{% extends 'layoutadmin.html' %}
+
+{% block body %}
+
+        
+        <div class="container">
+            <div class="jumbotron" id="dashjumbo">
+                <h2>Welcome,{{ session.user_id }}</h2>   
+                <br>
+                <p class="text-center"><a class="btn btn-primary btn-lg" href="/bookingdetails" role="button" id="bookingbutton">Booking Status and Fuel Expenses</a></p> 
+                <br> <br>          
+                <p class="text-center"><a class="btn btn-primary btn-lg" href="/repairoil" role="button">Repair History and Oil Expenses</a></p>         
+            </div>
+        </div>
+
+
+
+
+{% endblock %}

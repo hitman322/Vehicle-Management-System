@@ -1,0 +1,35 @@
+{% extends 'layoutreg.html' %}
+
+{% block body %}
+    <div class="main main-agileits">
+        <div class="main-agilerow">
+            <div class="signup-wthreetop">
+                <h2>Enter Vehicle Details</h2>
+            </div> 
+            <div class="contact-wthree">
+                {% from "includes/_formhelpers.html" import render_field %}
+                <form method = "POST" action ="">
+                    <div class="form-group">
+                        {{render_field(form.veh_reg_no, class_ = "form-control",placeholder = "Enter Vehicle registration number")}}            
+                    </div>
+                    <div class="form-group">
+                        {{render_field(form.veh_name, class_ = "form-control",placeholder = "Enter Vehicle name")}}
+                    </div>
+                    <div class="form-group">
+                        {{render_field(form.veh_type, class_ = "form-control",placeholder = "Enter Vehicle type")}}
+                    </div>
+                    <div class="form-group">
+                        {{render_field(form.veh_mileage, class_ = "form-control",placeholder = "Enter Vehicle mileage")}}
+                    </div>
+                    <div class="form-group">
+                        {{render_field(form.veh_repairdate, class_ = "form-control",placeholder = "Enter Vehicle repair date")}}
+                    </div>
+                    <div class="form-group">
+                        {{render_field(form.veh_oilexpenses, class_ = "form-control",placeholder = "Enter Vehicle oil expenses")}}
+                    </div>
+                    <p><input type ="submit" class="btn btn-primary" value ="SUBMIT"></p>
+                </form>
+                </div> 
+        </div> 
+    </div>
+{% endblock %}

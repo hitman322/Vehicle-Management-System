@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<div class="container">
+		<div class="jumbotron" id="vehjumbo">
+			<h2>Welcome,<span id="user_id">{{session.user_id}}</span></h2>
+			<br>
+			<hr>
+			<br>
+			<table class="table table-striped">
+			<tr>
+				<th>Ride Id</th>
+				<th>User Id</th>
+				<th>Boarding Point</th>
+				<th>Destination</th>
+				<th>Ride Status</th>
+				<th>Ride Distance</th>
+				<th>Fuel Expenses</th>
+			</tr>
+			
+		{% for ride in data %}
+			<tr>
+				<td>{{ride.ride_id}}</td>
+				<td>{{ride.user_id}}</td>
+				<td>{{ride.boarding_point}}</td>
+				<td>{{ride.destination}}</td>
+				<td>{{ride.ride_status}}</td>
+				<td>{{ride.ride_distance}}</td>
+				{% for (ride_id, f) in fuel_expenses %}
+					{% if ride_id == ride.ride_id %}				
+						<td>{{f}}</td>
+					{% endif %}
+				{% endfor %}
+			</tr>
+		{% endfor %}
+		
+	</table>
+
+		</div>
+	</div>
+{% endblock %}

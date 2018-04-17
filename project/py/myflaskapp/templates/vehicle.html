@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<div class="container">
+		<div class="jumbotron" id="vehjumbo">
+			<h2>Welcome,<span id="user_id">{{session.user_id}}</span></h2>
+			<a class="btn btn-success" href="/addvehicle"> Add Vehicle</a>
+			<br>
+			<hr>
+			<br>
+			<table class="table table-striped">
+			<tr>
+				<th>Registration Number</th>
+				<th>Vehicle Name</th>
+				<th>Vehicle Type</th>
+				<th>Vehicle Mileage</th>
+				<th></th>
+				<th></th>
+			</tr>
+		{% for vehicle in data %}
+			<tr>
+				<td>{{vehicle.veh_reg_no}}</td>
+				<td>{{vehicle.veh_name}}</td>
+				<td>{{vehicle.veh_type}}</td>
+				<td>{{vehicle.veh_mileage}}</td>
+				<td><a href="editvehicle/{{vehicle.veh_reg_no}}" class="btn btn-default pull-right">Edit</a></td>
+				<td>
+					<form action="{{url_for('deletevehicle', veh_reg_no=vehicle.veh_reg_no)}}" method="post"> 
+						<input type="hidden" name="method" value="DELETE">
+						<input type="submit" name="method" value="Delete" class="btn btn-danger">
+					</form>
+				</td>
+			</tr>
+		{% endfor %}
+	</table>
+
+		</div>
+	</div>
+{% endblock %}

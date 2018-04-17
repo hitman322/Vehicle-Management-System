@@ -1,0 +1,16 @@
+body {
+    background: url("car3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-heading {
+    /*margin-top: 150px;*/
+    text-align: center;
+}
+
+.main-heading-content {
+    background: transparent;
+    color: #F5F5F5;
+    font-family: "IBM Plex Mono";
+}

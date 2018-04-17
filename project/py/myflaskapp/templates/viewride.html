@@ -1,0 +1,20 @@
+  {% extends 'layout.html' %}
+
+  {% block body %}
+  <div class="container">
+            <div class="jumbotron" id="viewjumbo">
+                <h3>RIDE DETAILS</h3>
+                <p id="ridedet">
+                    Ride ID : {{ res1.ride_id }}<br>
+                    Vehicle Name : {{ res2.veh_name }}<br>
+                    Vehicle Registration Number : {{ res1.veh_reg_no }}<br>
+                    Driver Name : {{ res3.driver_name }}<br>
+                    Driver Mobile : {{ res3.driver_mobile }}<br>
+                </p>
+                <p>
+                    <a class="btn btn-success btn-lg" href="/bookanother" role="button">END RIDE</a>
+                    <a class="btn btn-danger btn-lg" href="/cancelride" role="button" id="cancelbut">CANCEL RIDE</a>
+                </p>
+            </div>
+  </div>
+{% endblock %}
